@@ -95,5 +95,4 @@ Before running locally, ensure the following:
 
 ---
 
-## 📁 Folder Structure
 
