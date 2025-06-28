@@ -102,10 +102,5 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-## 📬 Contributions
-
-Pull requests are welcome! If you have any ideas or improvements, feel free to fork and submit a PR.
-
----
 
 > *Empowering travelers with smart, AI-assisted planning. Say goodbye to the hassle and hello to your next adventure!*
