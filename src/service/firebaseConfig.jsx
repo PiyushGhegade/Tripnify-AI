@@ -4,7 +4,7 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: VITE_FIREBASE_API_KEY,
+  apiKey: "AIzaSyC-GRmJiX3vdsg0R204Fc_7wnvh-97OAdA",
   authDomain: "tripnify-ai.firebaseapp.com",
   projectId: "tripnify-ai",
   storageBucket: "tripnify-ai.appspot.com", // ✅ FIXED
