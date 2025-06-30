@@ -21,7 +21,8 @@ import { useNavigate } from 'react-router-dom';
 
 function CreateTrip() {
   const [place, setPlace] = useState();
-  const [formData, setFormData] = useState([]);
+
+  const [formData, setFormData] = useState({});
 
   const [openDialog, setOpenDialog] = useState(false);
 
@@ -76,16 +77,39 @@ function CreateTrip() {
     setLoading(true)
     const user = JSON.parse(localStorage.getItem('user'))
     const docId = Date.now().toString();
-    // Add a new document in collection "AITrips"
-    await setDoc(doc(db, "AITrips", docId), {
+
+    let parsedTrip;
+    try {
+      parsedTrip = JSON.parse(TripData);
+    } catch (e) {
+      console.error("Failed to parse AI trip data:", TripData);
+      toast.error("Invalid trip data from AI");
+      setLoading(false);
+      return;
+    }
+
+    const dataToSave = {
       userSelection: formData,
-      tripData: JSON.parse(TripData),
+      tripData: parsedTrip,
       userEmail: user?.email,
       id: docId
-    });
-    setLoading(false)
-    navigate('/view-trip/' + docId)
-  }
+    };
+
+    console.log("Saving this to Firestore:", dataToSave);
+
+    try {
+      await setDoc(doc(db, "AITrips", docId), dataToSave);
+      navigate('/view-trip/' + docId);
+    } catch (err) {
+      console.error("Firestore error:", err);
+      toast.error("Failed to save trip to Firestore");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+
+
 
   const login = useGoogleLogin({
     onSuccess: (res) => GetUserProfile(res),

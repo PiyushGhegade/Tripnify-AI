@@ -1,19 +1,16 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import {getFirestore} from 'firebase/firestore'
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyBLtuliEkAqGXSe5RoZUFj1hJSkMI9U-CQ",
-  authDomain: "ai-trip-planner-b16ba.firebaseapp.com",
-  projectId: "ai-trip-planner-b16ba",
-  storageBucket: "ai-trip-planner-b16ba.appspot.com",
-  messagingSenderId: "654419959827",
-  appId: "1:654419959827:web:ab457688f1e234fe0f1fe6",
-  measurementId: "G-DS3935ZN33"
+  apiKey: "AIzaSyC-GRmJiX3vdsg0R204Fc_7wnvh-97OAdA",
+  authDomain: "tripnify-ai.firebaseapp.com",
+  projectId: "tripnify-ai",
+  storageBucket: "tripnify-ai.appspot.com", // ✅ FIXED
+  messagingSenderId: "1047721185798",
+  appId: "1:1047721185798:web:98f1931eae1377e160a987",
+  measurementId: "G-LMR6MYY13J"
 };
 
 // Initialize Firebase
