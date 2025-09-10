@@ -13,7 +13,7 @@
 
 ## 🌐 Live Preview
 
-🔗 **[👉 Try the Live App](https://ai-trip-planner-barika.vercel.app/)**  
+🔗 **[👉 Try the Live App](https://tripnify-ai.vercel.app/)**  
 _Deployed via Vercel. Optimized for mobile and desktop._
 
 ---
